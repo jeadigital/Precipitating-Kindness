@@ -27,7 +27,7 @@ export class GetallaccrejhouserequestComponent implements OnInit {
         console.log("ist");
         console.log(res);
 
-       
+       this.values=res;
  
         if (this.values.length!=0) {
           console.log("123");
