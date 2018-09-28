@@ -39,9 +39,7 @@ Run the database setup scripts located under `db/fabricexplorer.sql`
 
 `mysql -u<username> -p < db/fabricexplorer.sql`
 
-## Fabric network setup
 
- Setup your own network using [Build your network](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html) tutorial from Fabric. Once you setup the network, please modify the values in `config.json` accordingly. 
 
 ## Running blockchain-explorer
 
