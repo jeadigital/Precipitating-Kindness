@@ -1,0 +1,12 @@
+---
+
+name: "jeabc-govt"
+description: "jeabc Network - client definition for Govt"
+version: "1.0"
+
+client:
+  organization: Govt
+  credentialStore:
+    path: "./key/fabric-client-kv-govt"
+    cryptoStore:
+      path: "./key/cryptoStore/govt"

@@ -1,0 +1,168 @@
+---
+# --------------------------------------------------------------------------------------------
+# The network connection profile provides client applications the information about the target
+# blockchain network that are necessary for the applications to interact with it. 
+# --------------------------------------------------------------------------------------------
+
+name: "jeabc"
+description: "jeabc Network"
+version: "1.0"
+
+channels:
+  jeadigitalchannel:
+    orderers:
+      - orderer1.jeabc.com
+      - orderer2.jeabc.com
+      - orderer3.jeabc.com
+
+    peers:
+      peer0.govt.jeabc.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+
+      peer0.builder.jeabc.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+      peer0.user.jeabc.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+
+
+    chaincodes:
+      - lending:v0
+
+organizations:
+  Govt:
+    mspid: GovtMSP
+    peers:
+      - peer0.govt.jeabc.com
+
+    certificateAuthorities:
+      - ca-govt
+
+    adminPrivateKey:
+      path: artifacts/channel/crypto-config/peerOrganizations/govt.jeabc.com/users/Admin@govt.jeabc.com/msp/keystore/37cf155fcb40a3c391ffb44522cf3f0fb6954d4152125df4908adcd108b53ea2_sk
+    signedCert:
+      path: artifacts/channel/crypto-config/peerOrganizations/govt.jeabc.com/users/Admin@govt.jeabc.com/msp/signcerts/Admin@govt.jeabc.com-cert.pem
+
+  Builder:
+    mspid: BuilderMSP
+    peers:
+      - peer0.builder.jeabc.com
+
+    certificateAuthorities:
+      - ca-builder
+    adminPrivateKey:
+      path: artifacts/channel/crypto-config/peerOrganizations/builder.jeabc.com/users/Admin@builder.jeabc.com/msp/keystore/037e5d8d33e3304e5c439e4f9e208bdc7d7b39719183262ca5a707f3a3bd371e_sk
+    signedCert:
+      path: artifacts/channel/crypto-config/peerOrganizations/builder.jeabc.com/users/Admin@builder.jeabc.com/msp/signcerts/Admin@builder.jeabc.com-cert.pem
+
+  User:
+    mspid: UserMSP
+    peers:
+      - peer0.user.jeabc.com
+    certificateAuthorities:
+      - ca-user
+    adminPrivateKey:
+      path: artifacts/channel/crypto-config/peerOrganizations/user.jeabc.com/users/Admin@user.jeabc.com/msp/keystore/445d3914f112e4486023f80a785fd7e737d8ae23ade798c57d4eef2a51b274f0_sk
+    signedCert:
+      path: artifacts/channel/crypto-config/peerOrganizations/user.jeabc.com/users/Admin@user.jeabc.com/msp/signcerts/Admin@user.jeabc.com-cert.pem
+
+orderers:
+  orderer1.jeabc.com:
+    url: grpcs://localhost:15101
+    grpcOptions:
+      ssl-target-name-override: orderer1.jeabc.com
+      grpc-max-send-message-length: 15
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/jeabc.com/orderers/orderer1.jeabc.com/tls/ca.crt
+
+  orderer2.jeabc.com:
+    url: grpcs://localhost:15102
+    grpcOptions:
+      ssl-target-name-override: orderer2.jeabc.com
+      grpc-max-send-message-length: 15
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/jeabc.com/orderers/orderer2.jeabc.com/tls/ca.crt
+
+  orderer3.jeabc.com:
+    url: grpcs://localhost:15103
+    grpcOptions:
+      ssl-target-name-override: orderer3.jeabc.com
+      grpc-max-send-message-length: 15
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/ordererOrganizations/jeabc.com/orderers/orderer3.jeabc.com/tls/ca.crt
+
+peers:
+  peer0.govt.jeabc.com:
+    # this URL is used to send endorsement and query requests
+    url: grpcs://localhost:15121
+    # this URL is used to connect the EventHub and registering event listeners
+    eventUrl: grpcs://localhost:15123
+    grpcOptions:
+      ssl-target-name-override: peer0.govt.jeabc.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/govt.jeabc.com/peers/peer0.govt.jeabc.com/tls/ca.crt
+
+
+  peer0.builder.jeabc.com:
+    url: grpcs://localhost:15133
+    eventUrl: grpcs://localhost:15135
+    grpcOptions:
+      ssl-target-name-override: peer0.builder.jeabc.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/builder.jeabc.com/peers/peer0.builder.jeabc.com/tls/ca.crt
+
+
+  peer0.user.jeabc.com:
+    url: grpcs://localhost:15145
+    eventUrl: grpcs://localhost:15147
+    grpcOptions:
+      ssl-target-name-override: peer0.user.jeabc.com
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/user.jeabc.com/peers/peer0.user.jeabc.com/tls/ca.crt
+
+certificateAuthorities:
+  ca-govt:
+    url: https://localhost:15111
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/govt.jeabc.com/ca/ca.govt.jeabc.com-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    # [Optional] The optional name of the CA.
+    caName: ca-govt
+
+  ca-builder:
+    url: https://localhost:15112
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/builder.jeabc.com/ca/ca.builder.jeabc.com-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    # [Optional] The optional name of the CA.
+    caName: ca-builder
+
+  ca-user:
+    url: https://localhost:15113
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: artifacts/channel/crypto-config/peerOrganizations/user.jeabc.com/ca/ca.user.jeabc.com-cert.pem
+    registrar:
+      - enrollId: admin
+        enrollSecret: adminpw
+    # [Optional] The optional name of the CA.
+    caName: ca-user

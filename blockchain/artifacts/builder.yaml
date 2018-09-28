@@ -1,0 +1,12 @@
+---
+
+name: "jeabc-builder"
+description: "jeabc Network - client definition for Builder"
+version: "1.0"
+
+client:
+  organization: Builder
+  credentialStore:
+    path: "./key/fabric-client-kv-builder"
+    cryptoStore:
+      path: "./key/cryptoStore/builder"

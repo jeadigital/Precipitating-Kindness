@@ -1,0 +1,12 @@
+---
+
+name: "jeabc-user"
+description: "jeabc Network - client definition for User"
+version: "1.0"
+
+client:
+  organization: User
+  credentialStore:
+    path: "./key/fabric-client-kv-user"
+    cryptoStore:
+      path: "./key/cryptoStore/user"
