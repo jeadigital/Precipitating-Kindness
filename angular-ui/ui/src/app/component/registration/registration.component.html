@@ -1,0 +1,45 @@
+<H1>USER REGISTRATION FORM</H1>
+<form [formGroup]="sampleform">
+   <div class="form-group">
+      <label for="exampleInputUserName1">User Name</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter UserName" formControlName="email"
+         /> <br/>
+      <label>Role</label><br/>
+      <div>
+         <p>
+            <input type="radio" value="Buyer" formControlName="role" (change)="roleChanged('buyer')"> Buyer
+            <input type="radio" value="Seller" formControlName="role"  (change)="roleChanged('seller')"> Seller
+         </p>
+      </div>
+      <label for="exampleInputName1">Name</label>
+      <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter  Name" formControlName="name"
+         /> <br/>
+      <label for="exampleInputPhone1">Phone Number</label>
+      <input type="phone" class="form-control" id="exampleInputPhone1" aria-describedby="phoneHelp" placeholder="Enter  Phone Number" formControlName="phone"
+         /> <br/>
+      <label for="exampleInputName1">Password</label>
+      <input type="password" class="form-control" id="exampleInputpassword1" aria-describedby="passwordHelp" placeholder="Enter Password" formControlName="password"
+         />
+      <div *ngIf="roleChange=='buyer'" >
+         <label for="exampleInputName1">Token</label>
+         <input type="name" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter  Token" formControlName="accntref"
+            />
+      </div>
+      <br/>
+      <button type="button" (click)="open(content)" class="btn btn-success">Register</button>
+   </div>
+</form>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>

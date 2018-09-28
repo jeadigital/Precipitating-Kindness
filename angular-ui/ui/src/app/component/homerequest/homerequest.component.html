@@ -1,0 +1,148 @@
+<div class="row">
+        <div class="col-md-4">
+                <img class="backbuttton" (click)=" goToHomestatus()" src="assets/back12.png" />
+        </div>
+
+        <div class="col-md-4 form-div">
+
+                <p class="homerequest">
+                        <b>Home Request Form</b>
+                </p>
+                <hr>
+                <form [formGroup]="sampleform">
+                        <div class="form-group ">
+
+                                <label for="exampleInputName1">
+                                        <b>Location</b>
+                                </label>
+                                <input type="name" class="form-control" id="exampleInputlocation1" aria-describedby="nameHelp" placeholder="Enter  Location"
+                                        formControlName="location" />
+                                <br/>
+
+
+                                <div *ngIf="sampleform.controls['location'].invalid && (sampleform.controls['location'].dirty || sampleform.controls['location'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['location'].errors.required">
+                                   
+                                </div>
+                                Location Required
+                            </div>
+
+
+                                <label for="exampleInputName1">
+                                        <b>Damage Details</b>
+                                </label>
+                                <input type="name" class="form-control" id="exampleInputdetails1" aria-describedby="nameHelp" placeholder="Enter Damage details"
+                                        formControlName="damagedetails" />
+                                <br/>
+
+
+                                <div *ngIf="sampleform.controls['damagedetails'].invalid && (sampleform.controls['damagedetails'].dirty || sampleform.controls['damagedetails'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['damagedetails'].errors.required">
+                                   
+                                </div>
+                                Damage Details Required
+                            </div>
+
+
+                                <label for="exampleInputPhone1">
+                                        <b>Property Id</b>
+                                </label>
+                                <input type="phone" class="form-control" id="exampleInputPid" aria-describedby="phoneHelp" placeholder="Enter  Property Id"
+                                        formControlName="propertyid" />
+                                <br/>
+
+
+
+                                <div *ngIf="sampleform.controls['propertyid'].invalid && (sampleform.controls['propertyid'].dirty || sampleform.controls['propertyid'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['propertyid'].errors.required">
+                                   
+                                </div>
+                                Property Id Required
+                            </div>
+
+
+
+
+                                <label for="exampleInputName1">
+                                        <b>House Number</b>
+                                </label>
+                                <input type="housenumber" class="form-control" id="exampleInputhno" aria-describedby="housenumberHelp" placeholder="Enter Housenumber"
+                                        formControlName="housenumber" />
+                                <br/>
+
+                                
+
+                                <div *ngIf="sampleform.controls['housenumber'].invalid && (sampleform.controls['housenumber'].dirty || sampleform.controls['housenumber'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['housenumber'].errors.required">
+                                   
+                                </div>
+                                Housenumber Required
+                            </div>
+
+                                <label for="exampleInputPhone1">
+                                        <b>Village</b>
+                                </label>
+                                <input type="phone" class="form-control" id="exampleInputvillage1" aria-describedby="villageHelp" placeholder="Enter  Village"
+                                        formControlName="village" />
+                                <br/>
+                                
+                                <div *ngIf="sampleform.controls['village'].invalid && (sampleform.controls['village'].dirty || sampleform.controls['village'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['village'].errors.required">
+                                   
+                                </div>
+                                Village Required
+                            </div>
+
+
+                                <label for="exampleInputName1">
+                                        <b>District</b>
+                                </label>
+                                <input type="housenumber" class="form-control" id="exampleIntputdistrict" aria-describedby="districtnumberHelp" placeholder="Enter district"
+                                        formControlName="district" />
+                                <br/>
+                               <div *ngIf="sampleform.controls['district'].invalid && (sampleform.controls['district'].dirty || sampleform.controls['district'].touched)"
+                                class="alert alert-danger">
+                                <div *ngIf="sampleform.controls['district'].errors.required">
+                                   
+                                </div>
+                                District Required
+                            </div>
+
+                                
+
+                                <button type="button" class="buttoncolor2" (click)=" userRegister() " [disabled]="sampleform.pristine||sampleform.invalid">Submit</button>
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+
+                        </div>
+                        <div *ngIf="msg2()">{{this.status}}</div>
+                </form>
+        </div>
+
+        <div class="col-md-4">
+
+                <div class="col-md-4">
+
+                </div>
+
+                <div class="row">
+                        <div class="col-md-6"></div>
+                        <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+                        <img class="backbuttton1" (click)=" goToviewstatus()" src="assets/rightarrow.png" />
+                        <div class="col-md-6">
+
+                        </div>
+
+
+                </div>
+
+
+
+
+
+        </div>
+</div>

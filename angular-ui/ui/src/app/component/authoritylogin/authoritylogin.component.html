@@ -1,0 +1,172 @@
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 form-div">
+        <div class="row">
+            <div class="col-md-6 col-xs-4" style="padding:0px" (click)="clickLogin(1)" [class.tab-active-reg]="!loginClicked">
+                <div class="tab-active-login">
+                    <span>SIGN IN</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-4" style="padding:0px" (click)="clickLogin(2)" [class.tab-active-reg]="loginClicked">
+                <div class="tab-active-login">
+                    <span>REGISTER</span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <form [formGroup]="loginform" *ngIf="loginClicked" style="padding:25px">
+            <div class="form-group">
+
+                <label for="exampleInputName1" class="left-label">Role</label>
+                <select class="form-control" (change)="roleChanged1($event.target.value)">
+                    <option value=""> Select </option>
+
+                    <option value="Planner">Planner</option>
+                    <option value="Surveyor"> Surveyor</option>
+
+
+                </select>
+
+                <br>
+
+                <label for="exampleInputEmail1" class="left-label">User Name</label>
+                <input type="username" class="form-control" id="exampleInputUserName1" aria-describedby="usernameHelp"
+                    placeholder="Enter User Name" formControlName="email" />
+                <br />
+
+
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div *ngIf="loginform.controls['email'].invalid && (loginform.controls['email'].dirty || loginform.controls['email'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="loginform.controls['email'].errors.required">
+                        Email is Required.
+                    </div>
+                    <div *ngIf="loginform.controls['email'].errors.email && !loginform.controls['email'].errors.required">
+                        Incorrect Format.
+                    </div>
+                </div>
+
+
+
+
+                <label for="exampleInputName1" class="left-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputpassword1" aria-describedby="passwordHelp"
+                    placeholder="Enter Password" formControlName="password" />
+                <br />
+
+
+
+                <div *ngIf="loginform.controls['password'].invalid && (loginform.controls['password'].dirty || loginform.controls['password'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="loginform.controls['password'].errors.required">
+                        Password required.
+                    </div>
+
+                </div>
+
+
+                <button type="button" class=" buttoncolor1 " (click)="login()" [disabled]="loginform.pristine||loginform.invalid">SIGN
+                    IN</button>
+            </div>
+
+        </form>
+        <form [formGroup]="sampleform" *ngIf="!loginClicked" style="padding:25px;">
+            <div class="form-group">
+                <label for="exampleInputName1" class="left-label">Role</label>
+                <select class="form-control" (change)="roleChanged1($event.target.value)">
+                    <option value=""> Select </option>
+
+                    <option value="Planner">Planner</option>
+                    <option value="Surveyor"> Surveyor</option>
+
+
+                </select>
+                <br />
+
+                <label for="exampleInputName1" class="left-label">User Name</label>
+                <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter user name"
+                    formControlName="email" />
+                <br />
+
+
+
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div *ngIf="sampleform.controls['email'].invalid && (sampleform.controls['email'].dirty || sampleform.controls['email'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="sampleform.controls['email'].errors.required">
+                        Email is Required.
+                    </div>
+                    <div *ngIf="sampleform.controls['email'].errors.email && !sampleform.controls['email'].errors.required">
+                        Incorrect Format.
+                    </div>
+                </div>
+
+
+
+
+                <label for="exampleInputName1" class="left-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputpassword1" aria-describedby="passwordHelp"
+                    placeholder="Enter Password" formControlName="password" />
+                <br />
+
+                <div *ngIf="sampleform.controls['password'].invalid && (sampleform.controls['password'].dirty || sampleform.controls['password'].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="sampleform.controls['password'].errors.required">
+                        Password required.
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div *ngIf="roleChange=='HouseOwner'">
+
+
+                    <label for="exampleInputPhone1" class="left-label">Mobile Number</label>
+                    <input type="phone" class="form-control" id="exampleInputPhone1" aria-describedby="phoneHelp"
+                        placeholder="Enter  Phone Number" formControlName="mobile" />
+                    <br />
+
+
+
+                    <div *ngIf="sampleform.controls['mobile'].invalid && (sampleform.controls['mobile'].dirty || sampleform.controls['mobile'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="sampleform.controls['mobile'].errors.required">
+                            Mobile number required.
+                        </div>
+
+                    </div>
+
+
+                    <label for="exampleInputUserName1" class="left-label"> Adhaar Number</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Adhaar number" formControlName="aadhar" />
+                    <br />
+
+                    <div *ngIf="sampleform.controls['aadhar'].invalid && (sampleform.controls['aadhar'].dirty || sampleform.controls['aadhar'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="sampleform.controls['aadhar'].errors.required">
+                            Aadhaar Number is required
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+                <br />
+                <button type="button" (click)="userRegister()" class=" buttoncolor">SIGN UP</button>
+            </div>
+
+            <div *ngIf="msg()">{{this.respnse}}</div>
+        </form>
+    </div>
+
+</div>

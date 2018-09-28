@@ -1,0 +1,503 @@
+.artboard {
+    width: 100%;
+    min-width: 1440px;
+    height: 100vh;
+    min-height: 1024px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 1.0)
+}
+
+a {
+    text-decoration: none
+}
+
+div {
+    -webkit-text-size-adjust: none
+}
+
+div {
+    -webkit-text-size-adjust: none
+}
+
+.artboard .bluespherebackground10171928 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: -497px;
+    height: 1915px;
+    width: 1915px;
+    position: absolute;
+    margin: 0;
+    left: -22px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .rectangle1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: -20px;
+    height: 1067px;
+    width: 1530px;
+    position: absolute;
+    margin: 0;
+    left: -60px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .a22020e82b374210a907972bda9d08f3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 43px;
+    height: 55px;
+    width: 49px;
+    position: absolute;
+    margin: 0;
+    left: 38px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .group {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 50px;
+    height: 37px;
+    width: 139px;
+    position: absolute;
+    margin: 0;
+    left: 1270px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .group .showmore {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 9px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 28px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .group .rectangle10 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 37px;
+    width: 139px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 1.0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .blog {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 59px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 1204px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .contactus {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 59px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 1090px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .work {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 59px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 1019px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .about {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 59px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 943px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .whatwedo {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 59px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 825px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'San Francisco', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -.37px;
+    line-height: 16.0px
+}
+
+.artboard .sliderindicator {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 726px;
+    height: 89px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 1949px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1copy {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 15px;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1copy2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 31px;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1copy3 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 47px;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1copy4 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 63px;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .sliderindicator .oval1copy5 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 81px;
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .rebuildinglives {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 428px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 377px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'Helvetica', Helvetica, Arial, serif;
+    font-size: 100.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    letter-spacing: -4.53px;
+    line-height: 120.0px
+}
+
+.artboard .helprebuildtheliv {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 584px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 311px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'Helvetica', Helvetica, Arial, serif;
+    font-size: 34.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -1.0px;
+    line-height: 41.0px
+}
+
+.artboard .buttonshowmore {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 707px;
+    height: 47px;
+    width: 263px;
+    position: absolute;
+    margin: 0;
+    left: 589px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .buttonshowmore .rectangle6 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 47px;
+    width: 263px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 1.0);
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .buttonshowmore .login {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 14px;
+    height: auto;
+    width: auto;
+    position: absolute;
+    margin: 0;
+    left: 92px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'Helvetica', Helvetica, Arial, serif;
+    font-size: 14.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: 7.0px;
+    line-height: 17.0px
+}
+
+.artboard .group2 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 350px;
+    height: 76px;
+    width: 545px;
+    position: absolute;
+    margin: 0;
+    left: 561px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .group2 .jeadigital {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 13px;
+    height: auto;
+    width: 469px;
+    position: absolute;
+    margin: 0;
+    left: 75px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    font-family: 'Helvetica', Helvetica, Arial, serif;
+    font-size: 44.0px;
+    color: rgba(255, 255, 255, 1.0);
+    text-align: justify;
+    letter-spacing: -1.0px;
+    line-height: 52.0px
+}
+
+.artboard .group2 .a22020e82b374210a907972bda9d08f31 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: 0;
+    height: 76px;
+    width: 68px;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.artboard .lowpolytexture20 {
+    background-color: rgba(255, 255, 255, 0.0);
+    top: -1546px;
+    height: 1403px;
+    width: 2104px;
+    position: absolute;
+    margin: 0;
+    left: -3095px;
+    -ms-transform: rotate(0);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: .38
+}
+
+.anima-animate-appear {
+    opacity: 0;
+    display: block;
+    -webkit-animation: anima-reveal .3s ease-in-out 1 normal forwards;
+    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
+    -o-animation: anima-reveal .3s ease-in-out 1 normal forwards;
+    animation: anima-reveal .3s ease-in-out 1 normal forwards
+}
+
+.anima-animate-disappear {
+    opacity: 1;
+    display: block;
+    -webkit-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
+    -moz-animation: anima-reveal .3s ease-in 1 normal forwards;
+    -o-animation: anima-reveal .3s ease-in-out 1 reverse forwards;
+    animation: anima-reveal .3s ease-in-out 1 reverse forwards
+}
+
+.anima-animate-nodelay {
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0
+}
+
+@-webkit-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-o-keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes anima-reveal {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

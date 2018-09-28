@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+        <header>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+                                <button (click)="houserequestlist()" class=" btn btn-outline-light  logoutbttn">
+                                    <b>List house request</b>
+                                </button>
+
+                                <button (click)=" houserrequestplanapproval()" class="btn btn-outline-light  logoutbttn">
+                                    <b>Approve Plans</b>
+                                </button>
+
+                                <button class="btn btn-outline-light  logoutbttn active" (click)="bidRequest()">
+                                    <b>Bid Request</b>
+                                </button>
+
+                                <button (click)="houserequeststatus()" class="btn btn-outline-light  logoutbttn">
+                                    <b>Payment Request</b>
+                                </button>
+
+
+
+                                <button class="btn btn-outline-light  logoutbttn" (click)="completedHouselist()">
+                                    <b>Completed House</b>
+                                </button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-2">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+
+                                <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+
+
+
+            </div>
+        </header>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 form-div">
+
+
+        <div class="table table-striped">
+
+                <p  class="viewstatushouse" *ngIf="!values||values.length==0">NO DATA FOUND</p>
+            <table *ngIf="values.length>0" class="table table-hover ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>House Request Id</th>
+                        <th>User Id</th>
+
+                        <th></th>
+                        <th> </th>
+
+                    </tr>
+                </thead>
+
+                <tr *ngFor="let value of values ">
+                    <td>
+                        <p>{{value.HouseRequestID}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.UserID}}</p>
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn" (click)="bidRequest(value.HouseRequestID)">View Bids</button>
+                    </td>
+
+
+
+                </tr>
+            </table>
+
+
+
+        </div>

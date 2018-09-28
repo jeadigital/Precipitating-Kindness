@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-7">
+        <button (click)=" goToHome()" class="btn btn-outline-light  logoutbttn">Submit New Bid</button>
+        <button (click)="goToRegistration()" class="btn btn-outline-light  logoutbttn">Approved Bids</button>
+
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+        <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 form-div">
+
+
+        <div class="table table-striped">
+
+                <p  class="viewstatushouse" *ngIf="!values||values.length==0">NO DATA FOUND</p>
+            <table *ngIf="values.length>0" class="table table-hover ">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>HouseRequestID</th>
+                        <th>BalanceAmountToPay</th>
+
+
+
+                        <th> </th>
+
+                    </tr>
+                </thead>
+
+                <tr *ngFor="let value of values ">
+                    <td>
+                        <p>{{value.HouseRequestID}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.BalanceAmountToPay}}</p>
+                    </td>
+
+
+                    <td>
+                        <button type="button" class="btn" (click)="open(content,value)">Update work Status</button>
+                    </td>
+
+
+
+                </tr>
+            </table>
+            <ng-template #content let-modal>
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="modal-body">
+                        <form [formGroup]="modalform">
+                            <div class="form-group">
+
+
+                                <label>House Request ID </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" value="{{currentRequest.HouseRequestID}}"
+                                    formControlName='HouseRequestID'>
+                                <br/>
+
+
+                                <label for="exampleInputName1" class="left-label">Work Progress</label>
+                                <select class="form-control" (change)="roleChanged1($event.target.value)">
+                                    <option value=""> Select </option>
+                                    <option value="First"> First Phase Completed</option>
+                                    <option value="Second">Second Phase Completed</option>
+                                    <option value="Third"> Third Phase Completed</option>
+
+
+                                </select>
+
+                                <br/>
+                                <button class="btn" (click)="userAccept()">Submit</button> &nbsp;&nbsp;&nbsp;
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                </div>
+            </ng-template>
+          
+
+        </div>

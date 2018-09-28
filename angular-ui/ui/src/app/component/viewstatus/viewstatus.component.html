@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-4">
+    <img class="backbuttonview" (click)="   goToHomerequest()" src="assets/back12.png" />
+  </div>
+  <div class="col-md-4 form-div">
+    <div *ngIf="returnvalue()">
+
+      <table class="table table-striped">
+        <tr>
+          <th>PROPERTY ID </th>
+          <td>{{values.PropertyID}}</td>
+        </tr>
+        <tr>
+          <th>House Number </th>
+          <td>{{values.HouseNumber}}</td>
+        </tr>
+        <tr>
+          <th>House Location </th>
+          <td>{{values.HouseLocation}}</td>
+        </tr>
+        <tr>
+          <th>Damage Details </th>
+          <td>{{values.DamageDetails}}</td>
+        </tr>
+
+        <tr>
+          <th>Status </th>
+          <td>
+            <div *ngIf="msg()">{{this.statusnew}}</div>
+          </td>
+        </tr>
+
+
+
+        <div *ngIf="statusbuttonhide()">
+
+
+          <tr>
+            <th>
+              <button (click)=" userUpdate()">status update</button>
+            </th>
+          </tr>
+        </div>
+
+
+
+
+
+      </table>
+    </div>
+    <div class=" viewstatushouse" *ngIf="returnvalueflase()">
+      <p>
+        <u>No Active House Request</u>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="col-md-4">
+      <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+      <img class="backbuttonview1" (click)="goToHomestatus()" src="assets/rightarrow.png" />
+    </div>
+  </div>
+</div>

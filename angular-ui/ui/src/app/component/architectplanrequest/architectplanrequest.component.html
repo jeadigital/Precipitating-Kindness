@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+        <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 form-div">
+
+
+        <div class="table table-striped">
+
+                <p  class="viewstatushouse" *ngIf="!values||values.length==0">NO DATA FOUND</p>
+
+            <table *ngIf="values.length>0" class="table table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>HouseLocation</th>
+                        <th>HouseNumber</th>
+                        <th>HouseRequestID</th>
+                        <th>PropertyID</th>
+                        <th>UserID</th>
+                        <th> </th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tr *ngFor="let value of values ">
+                    <td>
+                        <p>{{value.HouseLocation}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.HouseNumber}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.HouseRequestID}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.PropertyID}}</p>
+                    </td>
+                    <td>
+                        <p>{{value.UserID}}</p>
+                    </td>
+                    <td></td>
+                    <td>
+                        <button type="button" class="btn" (click)="open(content,value)">Upload Plan</button>
+                    </td>
+
+
+                </tr>
+            </table>
+
+
+        </div>
+        <ng-template #content let-modal>
+            <div class="modal-header">
+
+                <h4 class="modal-title"> </h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="modalform">
+                    <div class="form-group">
+                        <table>
+                            <tr>
+
+
+                                <th>
+                                    <label>User ID</label>
+                                </th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <td>
+                                    <input type="text" value="{{currentRequest.HouseRequestID}}" formControlName='email1'> </td>
+                                <br/>
+
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Plan area</label>
+                                </th>&nbsp;&nbsp;
+                                <td>
+                                    <input type="text" placeholder="Enter  here" formControlName='area'>
+                                </td>
+                                <br/>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>Number Of Bed Rooms</label>
+                                </th> &nbsp;&nbsp;
+                                <td>
+                                    <input type="text" placeholder="Enter number of members" formControlName='members'> </td>
+                                <br/>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <label>More Details</label>
+                                </th>&nbsp;&nbsp;
+                                <td>
+                                    <textarea #content placeholder="comment here" formControlName='comment'> </textarea>
+                                </td>
+                                <br/>
+                            </tr>
+                        </table>
+                        <button class="btn" (click)=" Upload()">Upload</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+            </div>
+        </ng-template>
+        
+    </div>
+
+
+    <!--*************************************************************-->

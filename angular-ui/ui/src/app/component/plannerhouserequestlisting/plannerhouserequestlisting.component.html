@@ -1,0 +1,171 @@
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+        <header>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+                                <button (click)="houserequestlist()" class=" btn btn-outline-light active logoutbttn">
+                                    <b>List house request</b>
+                                </button>
+
+                                <button (click)=" houserrequestplanapproval()" class="btn btn-outline-light logoutbttn">
+                                    <b>Approve Plans</b>
+                                </button>
+
+                                <button class="btn btn-outline-light  logoutbttn " (click)="listuserrequestbidapproval()">
+                                    <b>Bid Request</b>
+                                </button>
+
+                                <button (click)="houserequeststatus()" class="btn btn-outline-light  logoutbttn">
+                                    <b>Payment Request</b>
+                                </button>
+
+
+
+                                <button class="btn btn-outline-light   logoutbttn" (click)="completedHouselist()">
+                                    <b>Completed House</b>
+                                </button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-2">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+
+                                <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+
+
+
+            </div>
+        </header>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 form-div">
+
+
+
+            <p  class="viewstatushouse" *ngIf="!values||values.length==0">NO DATA FOUND</p>
+
+        <table *ngIf="values.length>0" class="table table-hover ">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th>House Request Id</th>
+                    <th>User Id</th>
+                    <th>House Number</th>
+                    <th>DamageDetails</th>
+                    <th>Location</th>
+                    <th>Property Id</th>
+                    <th></th>
+                    <th> </th>
+
+                </tr>
+            </thead>
+
+            <tr *ngFor="let value of values ">
+                <td>
+                    <p>{{value.HouseRequestID}}</p>
+                </td>
+                <td>
+                    <p>{{value.UserID}}</p>
+                </td>
+                <td>
+                    <p>{{value.HouseNumber}}</p>
+                </td>
+                <td>
+                    <p>{{value.DamageDetails}}</p>
+                </td>
+                <td>
+                    <p>{{value.HouseLocation}}</p>
+                </td>
+                <td>
+                    <p>{{value.PropertyID}}</p>
+                </td>
+                <td>
+                    <button type="button" class="btn" (click)="open(content,value)">Status</button>
+                </td>
+
+
+
+            </tr>
+        </table>
+
+
+        <ng-template #content let-modal>
+            <div class="modal-header">
+
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="modalform">
+                    <div class="form-group">
+
+
+                        <table>
+                            <tr>
+                                <th>User ID </th>
+                                <td>
+                                    <input type="text" value="{{currentRequest.HouseRequestID}}" formControlName='email'> </td>
+                            </tr>
+                            <tr>
+                                <th>Remarks </th>
+                                <td>
+                                    <textarea #content placeholder="Enter comment here" formControlName='comments'></textarea>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>
+                                    <button class="btn" (click)=" userAccept()">Accept</button>
+                                </th>
+
+                                <td>
+                                    <button class="btn" (click)="userReject()"> Reject</button>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+
+            </div>
+
+        </ng-template>
+
+       
+
+    </div>

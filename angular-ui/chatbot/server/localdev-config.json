@@ -1,0 +1,14 @@
+{
+  "watson_assistant_apikey": "ADagcMN8vCRCHqk2pbPo5mOfGhkaydlK5hyVn3Oad4F0",
+  "watson_assistant_iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:conversation:us-east:a/9e6529464257443b9d49f9ffaee81585:921156b6-44f0-4b77-a59a-38f0ad6d9607::",
+  "watson_assistant_iam_apikey_name": "auto-generated-apikey-e0d9e325-3e91-4007-8c0a-e62da5783721",
+  "watson_assistant_iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Writer",
+  "watson_assistant_iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/9e6529464257443b9d49f9ffaee81585::serviceid:ServiceId-87adb95e-9026-4071-adb9-4686610ffe64",
+  "watson_assistant_url": "https://gateway-wdc.watsonplatform.net/assistant/api",
+  "watson_conversation_apikey": "ADagcMN8vCRCHqk2pbPo5mOfGhkaydlK5hyVn3Oad4F0",
+  "watson_conversation_iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:conversation:us-east:a/9e6529464257443b9d49f9ffaee81585:921156b6-44f0-4b77-a59a-38f0ad6d9607::",
+  "watson_conversation_iam_apikey_name": "auto-generated-apikey-e0d9e325-3e91-4007-8c0a-e62da5783721",
+  "watson_conversation_iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Writer",
+  "watson_conversation_iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/9e6529464257443b9d49f9ffaee81585::serviceid:ServiceId-87adb95e-9026-4071-adb9-4686610ffe64",
+  "watson_conversation_url": "https://gateway-wdc.watsonplatform.net/assistant/api"
+}

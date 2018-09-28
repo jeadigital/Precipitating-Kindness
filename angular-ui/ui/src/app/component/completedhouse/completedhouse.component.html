@@ -1,0 +1,130 @@
+<div class="row">
+    <div class="col-md-12">
+
+
+
+
+        <header>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+                                <button (click)="houserequestlist()" class=" btn btn-outline-light  logoutbttn">
+                                    <b>List house request</b>
+                                </button>
+
+                                <button (click)=" houserrequestplanapproval()" class=" btn btn-outline-light  logoutbttn">
+                                    <b>Approve Plans</b>
+                                </button>
+
+                                <button class="btn btn-outline-light  logoutbttn " (click)="listuserrequestbidapproval()">
+                                    <b>Bid Request</b>
+                                </button>
+
+                                <button (click)="houserequeststatus()" class=" btn btn-outline-light  logoutbttn">
+                                    <b>Payment Request</b>
+                                </button>
+
+
+
+                                <button class="btn btn-outline-light  logoutbttn active" (click)="completedHouselist()">
+                                    <b>Completed House</b>
+                                </button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-2">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mr-auto">
+
+
+                                <button (click)="logout()" class="btn btn-outline-light  logoutbttn">logout</button>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+
+
+
+            </div>
+        </header>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10 form-div">
+
+
+        <div class="table table-striped">
+            <div>
+                    <p  class="viewstatushouse" *ngIf="!values||values.length==0">NO DATA FOUND</p>
+                <table *ngIf="values.length>0" class="table table-hover">
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>HouseLocation</th>
+                            <th>HouseNumber</th>
+                            <th>HouseRequestID</th>
+                            <th>PropertyID</th>
+                            <th>UserID</th>
+
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tr *ngFor="let value of values ">
+                        <td>
+                            <p>{{value.HouseLocation}}</p>
+                        </td>
+                        <td>
+                            <p>{{value.HouseNumber}}</p>
+                        </td>
+                        <td>
+                            <p>{{value.HouseRequestID}}</p>
+                        </td>
+                        <td>
+                            <p>{{value.PropertyID}}</p>
+                        </td>
+                        <td>
+                            <p>{{value.UserID}}</p>
+                        </td>
+
+
+
+
+                    </tr>
+                </table>
+                
+            </div>
